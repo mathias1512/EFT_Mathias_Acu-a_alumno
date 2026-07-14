@@ -15,7 +15,32 @@ bodega = {
     'FLO6': [22990, 6],
 }
 
-def main():
+def leer_opcion():
+    while True:
+     try:
+            opcion = int(input("seleccione una opcion"))
+            if 1<= opcion <=6:
+                return opcion
+            print("debe seleccionar una opcion valida")
+     except ValueError:
+         print("debe seleccionar una opcion valida")
+
+def validar_arreglo(arreglo):     
+    if arreglo.strip() == "":
+        return False
+    return True
+def validar_texto(texto):
+    if texto.strip() == "":
+        return False
+    return True
+def validar_unidades (tipo):
+    unidades = unidades .upper()
+    return unidades in ["A", "B", "C"]
+def busqueda_unidades(p_min, p_max):
+    if unidades.strip() == "":
+        return False
+    return True
+def menu():
     print("========== MENÚ PRINCIPAL ==========")
     print("1. Unidades por tipo de arreglo")
     print("2. Búsqueda de arreglos por rango de precio")
@@ -23,3 +48,4 @@ def main():
     print("4. Agregar arreglo")
     print("5. Eliminar arreglo")
     print("6. Salir")
+    print("====================================")
